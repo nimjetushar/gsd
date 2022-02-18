@@ -9,8 +9,9 @@ Create Docker image using
 To list all locally available images
 `docker image ls`
 
-To create container in detach mode (-d) on port 8080
+To create container on port 8080. -it for interactive mode and -d for detach mode
 `docker container run -d --name web-app -p 8000:8080 nimjetushar/gsd:first-container`
+`docker container run -it --name web-app -p 8000:8080 nimjetushar/gsd:first-container`
 
 List all running container
 `docker container ls`
