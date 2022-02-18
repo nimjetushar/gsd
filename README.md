@@ -15,4 +15,13 @@ To create container in detach mode (-d) on port 8080
 List all running container
 `docker container ls`
 
+Stop container
+`docker container stop web-app`
+
+Start container
+`docker container start web-app`
+
+Remove/delete container
+`docker container rm web-app`
+
 
