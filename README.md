@@ -3,12 +3,17 @@ Getting started with Docker
 
 ## Comands for docker execution
 
+### Images
 Create Docker image using
 `docker image build -t nimjetushar/gsd:first-container .`
 
 To list all locally available images
 `docker image ls`
 
+Push image to docker artifactory
+`docker image push nimjetushar/gsd:first-container`
+
+### Containers
 To create container on port 8080. -it for interactive mode and -d for detach mode
 `docker container run -d --name web-app -p 8000:8080 nimjetushar/gsd:first-container`
 `docker container run -it --name web-app -p 8000:8080 nimjetushar/gsd:first-container`
