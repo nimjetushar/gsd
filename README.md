@@ -50,9 +50,7 @@ docker container rm web-app
 
 ## Multi Container (multi-container)
 
-### Docker compose 
-
-Compose docker
+Docker compose 
 ```
 docker-compose up -d
 ```
