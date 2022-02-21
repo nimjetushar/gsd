@@ -1,7 +1,7 @@
 # gsd
 Getting started with Docker
 
-## Comands for docker execution
+## First container (first-container)
 
 ### Docker Images
 Create Docker image using
@@ -9,9 +9,11 @@ Create Docker image using
 docker image build -t nimjetushar/gsd:first-container .
 ```
 
-List all locally available images
+List all locally available images and remove
 ```
 docker image ls
+
+docker image rm nimjetushar/gsd:first-container
 ```
 
 Push image to docker artifactory
@@ -45,5 +47,43 @@ Remove/delete container
 ```
 docker container rm web-app
 ```
+
+## Multi Container (multi-container)
+
+### Docker compose 
+
+Compose docker
+```
+docker-compose up -d
+```
+
+List all images and container create from compose
+```
+docker image ls
+docker container ls
+```
+
+Bring down running docker containers
+```
+docker-compose down
+```
+
+## Swarm stack container (swarm-stack)
+
+Build required images using docker build (refer yml file for details)
+
+Create & deploy swarm
+```
+docker swarm init
+docker stack deploy -c docker-compose.yml counter
+docker stack ls
+docker stack services counter
+docker stack ps counter
+```
+
+
+
+
+
 
 
